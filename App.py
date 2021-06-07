@@ -2,12 +2,11 @@ import streamlit as st
 from PIL import Image
 import pickle
 import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.datasets import load_iris
 st.set_option('deprecation.showfileUploaderEncoding', False)
 # Load the pickled model
-model = pickle.load(open('/content/drive/My Drive/iris_model.pkl', 'rb'))
+model = pickle.load(open('iris_model.pkl', 'rb'))
 iris = load_iris()
 def classify(num):
     if num<0.5:
